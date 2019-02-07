@@ -1,5 +1,5 @@
 # Recetas
-Servicio web de almacenamiento, el cual nos permitirá añadir, editar y borrar recetas de la base de datos.
+Servicio web de almacenamiento, añadir, editar y borrar  recetas
 
 # Herramientas a usar
 
@@ -19,14 +19,14 @@ Servicio web de almacenamiento, el cual nos permitirá añadir, editar y borrar 
   
   -Instalamos las demás dependencias de producción y desarrollo, etc...., con los siguientes comandos:  
       
-      npm i ejs express mongoose body-parser morgan logstash 
+      npm i ejs express mongoose body-parser logstash 
       //que serian nustras dependencias de produccion es decir
       //que nuestra app necesita para funcionar correctamente
       npm i nodemon -D //como dependencia de desarrollo
     
       
-- Vamos a la web de MongoDB https://www.mongodb.com/download-center/community, nos descargamos el instalador, y lo instalamos en w10.
-Además hay que hacer después de la instalación, varias cosas:
+- Vamos a la web de MongoDB https://www.mongodb.com/download-center/community  nos descargamos el instalador e instalamos 
+en w10 además hay que hacer después de la instalación varias cosas:
    - Añadimos a variables de entorno la carpeta C:\Program Files\MongoDB\Server\4.0\bin para poder ejecutar mongo sin errores desde cualquier lado.
-   - Tenemos que crear en C:\ la carpeta "data" y dentro de ésta, otra llamada "db" puesto que nos la requiere mongo para  su buen funcionamiento.
+   - Tenemos que crear en C:\ la carpeta data y dentro de esta otra llamada db puesto que nos la requiere mongo para  su buen funcionamiento.
 
