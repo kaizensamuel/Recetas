@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+      <h1><%= title %></h1>
+      <form action="/anadirReceta" method="post">
+          
+          <legend>Añade una receta</legend>
+          <div class="form-group">
+              <input type="text" id="titulo" class="form-control" name="title">
+          </div>
+           <div class="descripcion">
+              <div class="form-group">
+              Elaboracion:
+              </div>
+              <div class="form-group">
+
+                  <textarea class="form-control" name="elaboracion" cols="50" rows="1"></textarea>
+              </div>
+          </div>
+          <div class="ingredientes">
+              <div class="form-group">
+              Ingredientes:
+              </div>
+              <div class="form-group">
+
+                  <textarea class="form-control" name="ingredientes" cols="50" rows="1"></textarea>
+              </div>
+          </div>
+          <button class="btn btn-primary">Añadir</button>
+      </form>
+      <table class="table table-bordered table-hover">
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Title</th>
+                  <th>Descripciones</th>
+                  <th>Operaciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% for(var i=0 ;i< recetas.length;i++) { %>
+                  <tr>
+                      <td><%=recetas[i].id %></td>
+                      <td><strong><%= recetas[i].title %></strong></td>
+                      <td><strong><%= recetas[i].descripcion %></strong></td>
+                      <td>
+                          <a href="receta/<%= recetas[i]._id %>" class="<%= recetas[i].status ? 'btn btn-success': 'btn btn-dark'%>">Editar</a>
+                          <a href="eliminar/<%= recetas[i]._id %>" class="btn btn-danger">Eliminar</a>
+                      </td>
+                  </tr>
+              <%  } %>
+          </tbody>
+      </table>
+  </div>
+  <script>
+    document.getElementById('titulo').focus();
+    
+    </script>
+</body>
+</html>

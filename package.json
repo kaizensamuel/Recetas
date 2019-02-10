@@ -1,0 +1,30 @@
+{
+  "name": "iv-node",
+  "version": "1.0.0",
+  "description": "Almacenamiento de recetas",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "test": "mocha src/test/recetas.test.js --timeout 10000 --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "logstash": "^2.0.0",
+    "mongoose": "^5.4.5",
+    "morgan": "^1.9.1",
+    "should-http": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "should": "^13.2.3"
+  }
+}
