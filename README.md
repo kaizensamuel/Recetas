@@ -31,7 +31,7 @@ en w10 además hay que hacer después de la instalación varias cosas:
    - Añadimos a variables de entorno la carpeta C:\Program Files\MongoDB\Server\4.0\bin para poder ejecutar mongo sin errores desde cualquier lado.
    - Tenemos que crear en C:\ la carpeta data y dentro de esta otra llamada db puesto que nos la requiere mongo para  su buen funcionamiento.
 
-## Modelo Usad
+## Modelo Usado
 
 Tendré un modelo llamado receta que sera cada objeto que se guarde en nuestra bd el cual esta compuesto por:
 
@@ -53,6 +53,6 @@ Tendré un modelo llamado receta que sera cada objeto que se guarde en nuestra b
 
 ## Test
 
-Los test se han realizado sobre el modelo recetas con operaciones sobre  bd comprobando que todo se haga correctamente y falle cuando tiene que fallar el archivo creado para los test es recetas.test.js para ejecutar dichos test basta con ponerse en el directorio del proyecto y ejecutar:
+Los test se han realizado sobre el modelo recetas con operaciones sobre bd comprobando que todo se haga correctamente y falle cuando tiene que fallar. El archivo creado para los test es "recetas.test.js" y para ejecutar dichos test basta con ponerse en el directorio del proyecto y ejecutar:
 
          npm tets el cual mostrara si se han pasado dichos test.
