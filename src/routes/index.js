@@ -5,11 +5,11 @@ const routes= express.Router();
 const model=require('../models/recetas')();
 
 routes.get('/',(req,res)=>{
- // res.send('index');
-    model.find({},(err,recetas)=>{
+ res.send({ "status": "OK" });
+    /*model.find({},(err,recetas)=>{
         if(err) throw err;
        res.send('index');
-    });
+    });*/
     
 });
 routes.post('/anadirReceta',(req,resp)=>{
