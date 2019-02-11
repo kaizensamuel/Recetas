@@ -4,7 +4,7 @@ let db;
 
 module.exports=function (){
     if(!db){
-        db=mongoose.createConnection('mongodb://https://recetas-iv.herokuapp.com/recetas',{useNewUrlParser: true});
+        db=mongoose.createConnection('mongodb://sarez:501haxSAM-@cluster0-efv4a.mongodb.net/admin',{useNewUrlParser: true});
     }
     
     return db;
