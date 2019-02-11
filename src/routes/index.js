@@ -5,7 +5,7 @@ const routes= express.Router();
 //const model=require('../models/recetas')();
 
 routes.get('/',(req,res)=>{
-  res.render('index');
+  res.send('index');
    /* model.find({},(err,recetas)=>{
         if(err) throw err;
         res.render('index',{
