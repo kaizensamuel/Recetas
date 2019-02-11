@@ -2,20 +2,21 @@ const express= require('express');
 const routes= express.Router();
 
 
-const model=require('../models/recetas')();
+//const model=require('../models/recetas')();
 
 routes.get('/',(req,res)=>{
-    model.find({},(err,recetas)=>{
+  res.render('index');
+   /* model.find({},(err,recetas)=>{
         if(err) throw err;
         res.render('index',{
                title:'crud',
                recetas:recetas
         });
-    });
+    });*/
     
 });
 routes.post('/anadirReceta',(req,resp)=>{
-   let body =  req.body;
+   /*let body =  req.body;
    body.status=false;
     var array=[];
      for (var i in body.ingredientes) {
@@ -27,27 +28,27 @@ routes.post('/anadirReceta',(req,resp)=>{
         
         if(err) throw err
         resp.redirect('/');
-    });
+    });*/
 });
 
 routes.get('/receta/:id',(req,res)=>{
-    let id=req.params.id;
+  /*  let id=req.params.id;
   model.findById(id,(err,recetas)=>{
         if(err) throw err;
         recetas.status=!recetas.status;
       console.log(recetas.status);
         recetas.save()
           .then(()=> res.redirect('/'));
-    });
+    });*/
    
     
 });
 routes.get('/eliminar/:id',(req,res)=>{
-    let id=req.params.id;
+    /*let id=req.params.id;
   model.deleteOne({_id: id},(err,recetas)=>{
         if(err) throw err;
         res.redirect('/');
-    });
+    });*/
    
     
 });
