@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/kaizensamuel/Recetas.svg?branch=master)](https://travis-ci.org/kaizensamuel/recetas)
 # Recetas
 Servicio web de almacenamiento, añadir, editar y borrar  recetas
 
