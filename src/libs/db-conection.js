@@ -4,7 +4,7 @@ let db;
 
 module.exports=function (){
     if(!db){
-        db=mongoose.createConnection('mongodb://sarez:501haxSAM-@cluster0-efv4a.mongodb.net/admin',{useNewUrlParser: true});
+        db=mongoose.createConnection('mongodb+srv://sarez:501haxSAM-@cluster0-efv4a.mongodb.net/recetas?retryWrites=true',{useNewUrlParser: true});
     }
     
     return db;
