@@ -29,23 +29,23 @@ routes.post('/anadirReceta',(req,resp)=>{
 });
 
 routes.get('/receta/:id',(req,res)=>{
-  /*  let id=req.params.id;
+    let id=req.params.id;
   model.findById(id,(err,recetas)=>{
         if(err) throw err;
         recetas.status=!recetas.status;
       console.log(recetas.status);
         recetas.save()
           .then(()=> res.redirect('/'));
-    });*/
+    });
    
     
 });
 routes.get('/eliminar/:id',(req,res)=>{
-    /*let id=req.params.id;
+    let id=req.params.id;
   model.deleteOne({_id: id},(err,recetas)=>{
         if(err) throw err;
         res.redirect('/');
-    });*/
+    });
    
     
 });
