@@ -7,7 +7,7 @@ const indexRoutes=require('./routes/index');
 const app=express();
 
 
-app.set('port', process.env.port);
+app.set('port', process.env.port || 3000);
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use('/',indexRoutes);
 
 
-app.listen(process.env.PORT ,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log('server on port ',app.get('port'));
 });
