@@ -3,15 +3,18 @@ const routes= express.Router();
 
 
 const model=require('../models/recetas')();
-
+    
 routes.get('/',(req,res)=>{
- 
+ var r;
     model.find({},(err,recetas)=>{
-        if(err) throw err;
-       // return res.render('index',{title:'recetas', recetas: recetas});
+      return res.render('index',{title:'recetas', recetas: recetas});
+      //  if(err) throw err;
+        
+       // 
     });
     //
-    res.send({ "status": "OK" });
+    
+    //res.send({ "status": "OK" });
     
 });
 routes.post('/anadirReceta',(req,resp)=>{
