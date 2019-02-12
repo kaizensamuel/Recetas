@@ -5,16 +5,15 @@ const routes= express.Router();
 const model=require('../models/recetas')();
 
 routes.get('/',(req,res)=>{
-
+ //res.send({ "status": "OK" });
     model.find({},(err,recetas)=>{
-       res.send({ "status": "OK" });
         if(err) throw err;
-      // res.render('index',{ "status": "OK" });
+       res.render('index',{title:'recetas', recetas: recetas});
     });
     
 });
 routes.post('/anadirReceta',(req,resp)=>{
-   /*let body =  req.body;
+   let body =  req.body;
    body.status=false;
     var array=[];
      for (var i in body.ingredientes) {
@@ -26,7 +25,7 @@ routes.post('/anadirReceta',(req,resp)=>{
         
         if(err) throw err
         resp.redirect('/');
-    });*/
+    });
 });
 
 routes.get('/receta/:id',(req,res)=>{
