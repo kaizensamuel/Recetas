@@ -8,7 +8,7 @@ routes.get('/',(req,res)=>{
  //res.send({ "status": "OK" });
     model.find({},(err,recetas)=>{
         if(err) throw err;
-       res.render('index',{title:'recetas', recetas: recetas});
+        return res.render('index',{title:'recetas', recetas: recetas});
     });
     
 });
@@ -24,7 +24,7 @@ routes.post('/anadirReceta',(req,resp)=>{
     model.create({title:req.body.title,descripcion:req.body.elaboracion,ingredientes:array,status:"false"},(err,task)=>{
         
         if(err) throw err
-        resp.redirect('/');
+        return  resp.redirect('/');
     });
 });
 
@@ -44,7 +44,7 @@ routes.get('/eliminar/:id',(req,res)=>{
     let id=req.params.id;
   model.deleteOne({_id: id},(err,recetas)=>{
         if(err) throw err;
-        res.redirect('/');
+        return   res.redirect('/');
     });
    
     
